@@ -1,0 +1,35 @@
+{
+  "name": "icanhazdadjoke-client",
+  "version": "0.0.1",
+  "description": "node client for icanhasdadjoke api",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmptr/node-icanhazdadjoke-client.git"
+  },
+  "keywords": [
+    "node",
+    "typescript"
+  ],
+  "author": "JM <jonmichaelp@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmptr/node-icanhazdadjoke-client/issues"
+  },
+  "homepage": "https://github.com/jmptr/node-icanhazdadjoke-client#readme",
+  "dependencies": {
+    "axios": "^0.16.2"
+  },
+  "devDependencies": {
+    "ava": "^0.21.0",
+    "nyc": "^11.1.0",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.6.0",
+    "typescript": "^2.4.2"
+  }
+}

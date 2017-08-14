@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "inlineSourceMap": false,
+    "inlineSources": false,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "build/lib",
+    "paths": {
+      "*": [
+        "src/*"
+      ]
+    },
+    "rootDir": "src",
+    "sourceMap": true,
+    "target": "es6"
+  },
+  "exclude": [
+    "build",
+    "docs",
+    "node_modules",
+    "typings/main",
+    "typings/main.d.ts"
+  ]
+}

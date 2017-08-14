@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "tslint:recommended"
+  ],
+  "rules": {
+    "indent": [
+      true,
+      "spaces"
+    ],
+    "object-literal-sort-keys": false,
+    "no-console": [
+      false
+    ],
+    "quotemark": [
+      "single"
+    ]
+  }
+}

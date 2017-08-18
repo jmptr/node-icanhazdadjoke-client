@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
+    "declaration": true,
     "inlineSourceMap": false,
     "inlineSources": false,
     "module": "commonjs",

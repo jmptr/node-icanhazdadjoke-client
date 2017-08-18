@@ -1,12 +1,12 @@
 import axios, { AxiosInstance } from 'axios';
 
-interface IDadJoke {
+export interface IDadJoke {
   id: string;
   joke: string;
   status?: string;
 }
 
-interface IDadJokeSearchResponse {
+export interface IDadJokeSearchResponse {
   current_page: number;
   limit: number;
   next_page: number;

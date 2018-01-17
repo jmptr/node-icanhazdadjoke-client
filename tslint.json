@@ -1,18 +1,27 @@
 {
-  "extends": [
-    "tslint:recommended"
-  ],
+  "extends": "tslint:recommended",
   "rules": {
-    "indent": [
+    "variable-name": [
       true,
-      "spaces"
+      "allow-leading-underscore"
     ],
-    "object-literal-sort-keys": false,
-    "no-console": [
+    "interface-name": [
       false
     ],
+    "space-before-function-paren": [
+      true,
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
     "quotemark": [
-      "single"
-    ]
+      true, "single", "avoid-escape"
+    ],
+    "object-literal-sort-keys": [
+      false
+    ],
+    "no-var-requires": false
   }
 }

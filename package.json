@@ -2,14 +2,18 @@
   "name": "icanhazdadjoke-client",
   "version": "0.0.1",
   "description": "node client for icanhasdadjoke api",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
-    "clean": "rimraf lib build",
+    "clean": "rimraf dist build coverage",
     "prebuild": "npm run clean",
-    "build": "tsc -p src -outDir lib",
+    "build": "tsc -p tsconfig.pub.json",
     "prepare": "npm run build",
-    "test": "ava"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -29,12 +33,15 @@
     "axios": "0.17.1"
   },
   "devDependencies": {
+    "@types/jest": "22.2.3",
+    "@types/nock": "9.1.2",
     "ava": "0.24.0",
-    "ava-ts": "0.24.0",
-    "nyc": "11.4.1",
+    "jest": "22.4.3",
+    "nock": "9.0.14",
     "rimraf": "2.6.1",
-    "ts-node": "4.1.0",
+    "ts-jest": "22.4.4",
+    "ts-node": "6.0.0",
     "tslint": "5.9.1",
-    "typescript": "2.6.2"
+    "typescript": "2.8.3"
   }
 }

@@ -2,24 +2,28 @@
   "compilerOptions": {
     "baseUrl": ".",
     "declaration": true,
+    "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "inlineSourceMap": false,
     "inlineSources": false,
+    "lib": [
+      "es2015"
+    ],
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": false,
-    "outDir": "lib",
+    "outDir": "build",
     "paths": {
       "*": [
         "src/*"
       ]
     },
     "sourceMap": true,
-    "target": "es6"
+    "target": "es5"
   },
   "exclude": [
     "node_modules",

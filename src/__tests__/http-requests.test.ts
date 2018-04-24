@@ -1,5 +1,5 @@
 import nock from 'nock';
-import { ICanHazDadJokeClient } from '../';
+import ICanHazDadJokeClient from '../';
 
 describe('ICanHazDadJokeClient', () => {
   let scope: nock.Scope = null;

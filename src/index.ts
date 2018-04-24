@@ -18,7 +18,7 @@ export interface DadJokeSearchResponse {
   total_pages: number;
 }
 
-export class ICanHazDadJokeClient {
+export default class ICanHazDadJokeClient {
   public client: AxiosInstance = null;
 
   constructor(baseURL: string = 'https://icanhazdadjoke.com/') {

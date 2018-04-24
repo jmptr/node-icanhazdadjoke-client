@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "clean": "rimraf dist build coverage",
+    "doc": "typedoc --out ./build/docs",
     "prebuild": "npm run clean",
     "build": "tsc -p tsconfig.pub.json",
     "prepare": "npm run build",
@@ -42,6 +43,7 @@
     "ts-jest": "22.4.4",
     "ts-node": "6.0.0",
     "tslint": "5.9.1",
+    "typedoc": "0.11.1",
     "typescript": "2.8.3"
   }
 }

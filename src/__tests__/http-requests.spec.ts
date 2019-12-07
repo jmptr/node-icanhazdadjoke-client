@@ -1,5 +1,5 @@
 import { Scope } from 'nock';
-const nock = require('nock');
+import nock = require('nock');
 import ICanHazDadJokeClient from '../';
 
 describe('ICanHazDadJokeClient', () => {

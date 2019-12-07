@@ -21,7 +21,7 @@ export interface DadJokeSearchResponse {
 export default class ICanHazDadJokeClient {
   public client: AxiosInstance;
 
-  constructor(baseURL: string = 'https://icanhazdadjoke.com/') {
+  constructor(baseURL = 'https://icanhazdadjoke.com/') {
     this.client = axios.create({ baseURL});
     // https://icanhazdadjoke.com/api#api-response-format
     // set the Accept header to ensure the response is json
@@ -63,7 +63,11 @@ export default class ICanHazDadJokeClient {
    * @param limit number of items in result set
    * @param term term to find within joke text
    */
-  public async search(page?: number, limit?: number, term?: string): Promise<DadJokeSearchResponse> {
+  public async search(
+    page?: number,
+    limit?: number,
+    term?: string
+  ): Promise<DadJokeSearchResponse> {
     const config: AxiosRequestConfig = {
       url: '/search',
       params: {

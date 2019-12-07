@@ -1,0 +1,112 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "import",
+    "@typescript-eslint"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 100,
+        "ignorePattern": "^\\s*export|^\\s*const",
+        "ignoreUrls": true
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "only-multiline",
+        "functions": "never",
+        "imports": "only-multiline",
+        "objects": "only-multiline"
+      }
+    ],
+    "arrow-parens": [
+      2,
+      "always"
+    ],
+    "linebreak-style": [
+      0
+    ],
+    "no-nested-ternary": [
+      0
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "no-unused-vars": "off",
+    "import/no-extraneous-dependencies": [
+      0
+    ],
+    "import/prefer-default-export": [
+      0
+    ],
+    "@typescript-eslint/indent": [
+      1,
+      2
+    ],
+    "@typescript-eslint/explicit-function-return-type": [
+      0,
+      {
+        "allowExpressions": true
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": [
+      0
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": true
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**.spec.tsx",
+        "**.spec.ts"
+      ],
+      "env": {
+        "jest": true
+      },
+      "plugins": [
+        "jest"
+      ],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": [
+          0
+        ]
+      }
+    }
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "src"
+        ],
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  }
+}

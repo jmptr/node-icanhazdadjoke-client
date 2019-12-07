@@ -5,15 +5,14 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "scripts": {
-    "clean": "rimraf dist build coverage",
-    "doc": "typedoc --out ./build/docs",
-    "prebuild": "npm run clean",
-    "build": "tsc -p tsconfig.pub.json",
-    "test": "jest"
+    "lint": "eslint --cache ./src --ext .js,.jsx,.ts,.tsx",
+    "prebuild": "rimraf dist build",
+    "build": "tsc -p tsconfig.json",
+    "postbuild": "prettier --write \"dist/**/*.{js,ts}\"",
+    "test": "cross-env TS_NODE_PROJECT=\"tsconfig.test.json\" jest"
   },
   "repository": {
     "type": "git",
@@ -29,6 +28,36 @@
     "url": "https://github.com/jmptr/node-icanhazdadjoke-client/issues"
   },
   "homepage": "https://github.com/jmptr/node-icanhazdadjoke-client#readme",
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "./build/coverage",
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "html"
+    ],
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testRegex": "src/.*(/__tests__/.*|(.|/)(test|spec)).(ts|js)x?$",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
+  },
   "dependencies": {
     "axios": "^0.19.0"
   },
@@ -36,12 +65,18 @@
     "@types/jest": "^24.0.23",
     "@types/nock": "^11.1.0",
     "@types/node": "^12.12.14",
+    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@typescript-eslint/parser": "^2.10.0",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.1.1",
     "jest": "^24.9.0",
     "nock": "^11.7.0",
+    "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
     "ts-jest": "^24.2.0",
     "ts-node": "^8.5.4",
-    "tslint": "^5.20.1",
     "typescript": "^3.7.3"
   }
 }

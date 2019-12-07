@@ -1,9 +1,10 @@
-import nock from 'nock';
+import { Scope } from 'nock';
+const nock = require('nock');
 import ICanHazDadJokeClient from '../';
 
 describe('ICanHazDadJokeClient', () => {
-  let scope: nock.Scope = null;
-  let instance: ICanHazDadJokeClient = null;
+  let scope: Scope;
+  let instance: ICanHazDadJokeClient;
 
   beforeAll(() => {
     instance = new ICanHazDadJokeClient();
@@ -11,7 +12,7 @@ describe('ICanHazDadJokeClient', () => {
   });
 
   beforeEach(() => {
-    scope = nock(instance.client.defaults.baseURL);
+    scope = nock(instance.client.defaults.baseURL || '');
   });
 
   afterEach(() => {
@@ -37,7 +38,7 @@ describe('ICanHazDadJokeClient', () => {
   describe('search', () => {
     it('triggers intercept', async (done) => {
       scope.intercept('/search?term=example', 'GET').reply(200);
-      await instance.search(null, null, 'example');
+      await instance.search(undefined, undefined, 'example');
       done();
     });
   });

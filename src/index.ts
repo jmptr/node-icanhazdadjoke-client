@@ -19,7 +19,7 @@ export interface DadJokeSearchResponse {
 }
 
 export default class ICanHazDadJokeClient {
-  public client: AxiosInstance = null;
+  public client: AxiosInstance;
 
   constructor(baseURL: string = 'https://icanhazdadjoke.com/') {
     this.client = axios.create({ baseURL});

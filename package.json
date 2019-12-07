@@ -13,7 +13,6 @@
     "doc": "typedoc --out ./build/docs",
     "prebuild": "npm run clean",
     "build": "tsc -p tsconfig.pub.json",
-    "prepare": "npm run build",
     "test": "jest"
   },
   "repository": {
@@ -31,19 +30,18 @@
   },
   "homepage": "https://github.com/jmptr/node-icanhazdadjoke-client#readme",
   "dependencies": {
-    "axios": "0.17.1"
+    "axios": "^0.19.0"
   },
   "devDependencies": {
-    "@types/jest": "22.2.3",
-    "@types/nock": "9.1.2",
-    "ava": "0.24.0",
-    "jest": "22.4.3",
-    "nock": "9.0.14",
-    "rimraf": "2.6.1",
-    "ts-jest": "22.4.4",
-    "ts-node": "6.0.0",
-    "tslint": "5.9.1",
-    "typedoc": "0.11.1",
-    "typescript": "2.8.3"
+    "@types/jest": "^24.0.23",
+    "@types/nock": "^11.1.0",
+    "@types/node": "^12.12.14",
+    "jest": "^24.9.0",
+    "nock": "^11.7.0",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.4",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.3"
   }
 }

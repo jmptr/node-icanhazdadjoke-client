@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/jmptr/node-icanhazdadjoke-client/compare/v1.2.0...v1.2.1) (2019-12-08)
+
+
+### Bug Fixes
+
+* **semantic-release:** repair json error ([125a7b7](https://github.com/jmptr/node-icanhazdadjoke-client/commit/125a7b7d64d559dbfbe30a62ef435c47daafeac2))
+
 # [1.2.0](https://github.com/jmptr/node-icanhazdadjoke-client/compare/v1.1.0...v1.2.0) (2019-12-08)
 
 

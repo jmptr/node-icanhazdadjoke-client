@@ -17,7 +17,13 @@
     "pretest": "rimraf build/coverage",
     "test": "jest"
   },
+  "commitLint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "husky": {
+    "commit-msg": "commitlint -e",
     "pre-push": "yarn test && yarn lint && yarn docs"
   },
   "repository": {
@@ -38,6 +44,8 @@
     "axios": "^0.18.0 || ^0.19.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.14",
     "@typescript-eslint/eslint-plugin": "^2.10.0",

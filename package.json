@@ -17,15 +17,6 @@
     "pretest": "rimraf build/coverage",
     "test": "jest"
   },
-  "commitLint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "husky": {
-    "commit-msg": "commitlint -e",
-    "pre-push": "yarn test && yarn lint && yarn docs"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jmptr/node-icanhazdadjoke-client.git"

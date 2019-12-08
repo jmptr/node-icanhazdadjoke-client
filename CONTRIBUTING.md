@@ -19,7 +19,13 @@ and `docs`.
 
 ## publishing
 
+### prettier
+
 Using the typescript compiler provides output that has stylistic rules that are
 unpopular in published modules (eg: extra spaces consuming network bandwidth).
 By following the typescript build with a prettifier fix, we are able to publish
 code that is more palatable to consumers of the module.
+
+### semantic-release
+
+(Semantic release)[https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration] is used to build release versions and changelogs.

@@ -50,6 +50,7 @@
     "nock": "^11.7.0",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
+    "semantic-release": "^15.13.31",
     "ts-jest": "^24.2.0",
     "typedoc": "^0.15.3",
     "typescript": "^3.7.3"

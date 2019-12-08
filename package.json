@@ -12,7 +12,7 @@
     "docs": "typedoc --mode modules --exclude \"**/__tests__/*.ts\" --out build/docs src",
     "lint": "eslint --cache ./src --ext .js,.jsx,.ts,.tsx",
     "prebuild": "rimraf dist",
-    "build": "tsc -p tsconfig.pub.json",
+    "build": "tsc -p ./tools/tsconfig.pub.json",
     "postbuild": "prettier --write \"dist/**/*.{js,ts}\"",
     "pretest": "rimraf build/coverage",
     "test": "jest"

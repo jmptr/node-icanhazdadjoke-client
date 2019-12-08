@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": "../",
+    "declaration": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "outDir": "../dist",
+    "sourceMap": true,
+    "strict": true,
+    "target": "ESNext"
+  },
+  "include": [
+    "../src"
+  ],
+  "exclude": [
+    "../**/__tests__/**"
+  ]
+}

@@ -17,6 +17,9 @@
     "pretest": "rimraf build/coverage",
     "test": "jest"
   },
+  "husky": {
+    "pre-push": "yarn test && yarn lint && yarn docs"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jmptr/node-icanhazdadjoke-client.git"
@@ -43,6 +46,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^23.1.1",
+    "husky": "^3.1.0",
     "jest": "^24.9.0",
     "nock": "^11.7.0",
     "prettier": "^1.19.1",

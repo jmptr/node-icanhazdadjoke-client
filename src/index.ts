@@ -23,6 +23,9 @@ export interface DadJoke {
   status?: number;
 }
 
+/**
+ * Wrapper for dad joke list.
+ */
 export interface DadJokeSearchResponse {
   current_page: number;
   limit: number;

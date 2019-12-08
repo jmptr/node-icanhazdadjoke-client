@@ -1,9 +1,8 @@
-import { Scope } from 'nock';
-import nock = require('nock');
+import nock from 'nock';
 import ICanHazDadJokeClient from '../';
 
 describe('ICanHazDadJokeClient', () => {
-  let scope: Scope;
+  let scope: nock.Scope;
   let instance: ICanHazDadJokeClient;
 
   beforeAll(() => {
@@ -26,7 +25,7 @@ describe('ICanHazDadJokeClient', () => {
       done();
     });
   });
-  
+
   describe('getJokeById', () => {
     it('triggers intercept', async (done) => {
       scope.intercept('/j/123', 'GET').reply(200);

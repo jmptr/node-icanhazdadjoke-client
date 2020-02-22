@@ -2,12 +2,14 @@
   "compilerOptions": {
     "baseUrl": "../",
     "declaration": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
+    "lib": [
+      "ES2018"
+    ],
+    "module": "CommonJS",
     "outDir": "../dist",
     "sourceMap": true,
     "strict": true,
-    "target": "ESNext"
+    "target": "es2018"
   },
   "include": [
     "../src"
